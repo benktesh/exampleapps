@@ -25,5 +25,23 @@ namespace MVC_Example.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+
+        [HttpGet]
+        public IActionResult Vehicle()
+        {
+            return View(new VehicleViewModel());
+        }
+
+        [HttpPost]
+        public IActionResult Vehicle(VehicleViewModel vm)
+        {
+            
+            if (ModelState.IsValid)
+            {
+                ModelState.Clear();
+                return View(vm);
+            }
+            return View(new VehicleViewModel());
+        }
     }
 }
