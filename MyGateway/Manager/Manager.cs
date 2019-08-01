@@ -90,7 +90,6 @@ namespace MyGateway.Controllers
             logDTO.ServerName = Environment.MachineName;
             //Create New Log Object
             LogBSL.InsertLog(logDTO); //dependency on LogBSL
-
         }
     }
 }

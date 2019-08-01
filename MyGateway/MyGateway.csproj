@@ -128,7 +128,9 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\GatewayController.cs" />
+    <Compile Include="Models\CreditCard.cs" />
     <Compile Include="Models\CreditCardGroup.cs" />
+    <Compile Include="Models\Rate.cs" />
     <Compile Include="Models\ResultDTO.cs" />
     <Compile Include="Repository\ResultsRepository.cs" />
     <Compile Include="Manager\LogBSL.cs" />
@@ -136,7 +138,7 @@
     <Compile Include="Repository\LogRepository.cs" />
     <Compile Include="Manager\Logger.cs" />
     <Compile Include="Manager\LogInformation.cs" />
-    <Compile Include="Manager\Result.cs" />
+    <Compile Include="Models\Result.cs" />
     <Compile Include="Manager\Manager.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

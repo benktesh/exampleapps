@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using MyGateway.Models;
 
-namespace MyGateway.Controllers
+namespace MyGateway.Models
 {
     internal class Result
     {
@@ -17,7 +17,4 @@ namespace MyGateway.Controllers
     }
 
 
-    public class CreditCard
-    {
-    }
 }
