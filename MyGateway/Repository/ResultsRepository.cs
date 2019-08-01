@@ -12,7 +12,7 @@ namespace MyGateway.Repository
             throw new NotImplementedException();
         }
 
-        public List<ResultDTO> GetAvailableQuestionnaires(string orgNumber, object baseName, object isCreditCardItem)
+        public List<ResultDTO> GetAvailableQuestionnaires(string account, string baseName, bool type)
         {
             throw new NotImplementedException();
         }

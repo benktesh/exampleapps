@@ -24,7 +24,7 @@ namespace MyGateway.Controllers
                 jsonRequestData = JsonConvert.SerializeObject(requestData);
 
                 List<ResultDTO> resultsDTO = new List<ResultDTO>();
-                using (ResultsRepository questionnaireRepository = new ResultsRepository())
+                using (ResultsRepository questionnaireRepository = new ResultsRepository()) //dependency in repositiry
                 {
                     resultsDTO = questionnaireRepository.GetAvailableQuestionnaires(requestData.orgNumber, requestData.baseName, requestData.isCreditCardItem);
                 }
@@ -63,7 +63,7 @@ namespace MyGateway.Controllers
             }
             finally
             {
-                LogCommunication(jsonRequestData, requestStart, jsonData);
+                LogCommunication(jsonRequestData, requestStart, jsonData); 
             }
             return jsonData;
         }
@@ -89,7 +89,7 @@ namespace MyGateway.Controllers
             logDTO.Response = jsonData;
             logDTO.ServerName = Environment.MachineName;
             //Create New Log Object
-            LogBSL.InsertLog(logDTO);
+            LogBSL.InsertLog(logDTO); //dependency on LogBSL
 
         }
     }
